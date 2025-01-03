@@ -11,3 +11,4 @@ recvdata = np.empty(size,dtype=int)
 comm.Alltoall(senddata,recvdata)
 
 print("process %s sending %s receiving %s" % (rank, senddata, recvdata))
+
