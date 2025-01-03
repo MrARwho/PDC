@@ -1,6 +1,6 @@
 #
 import multiprocessing
-from myFunc import myFunc
+from xyz import myFunc
 
 if __name__ == '__main__':
     for i in range(6):

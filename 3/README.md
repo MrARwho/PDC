@@ -1,55 +1,47 @@
+# Python Multiprocessing Guide
 
-# Thread-Based Parallelism in Python
+Welcome to the **Python Multiprocessing Guide** repository! This project provides a comprehensive overview of Python's `multiprocessing` module, which allows parallel processing by creating multiple processes that can share and communicate data efficiently.
 
-Welcome to the **Thread-Based Parallelism** project! This repository demonstrates thread-based parallelism concepts in Python using the `threading` module. It showcases various techniques for defining, managing, and synchronizing threads to build robust concurrent applications.
+## Key Concepts
 
-## Features
-This project includes the following key implementations:
+### 1. Understanding Multiprocessing
+- Learn how multiprocessing enables concurrent tasks in Python by running multiple processes in parallel, utilizing multiple CPU cores to enhance performance.
 
-### 1. Thread Basics
-- **What is a thread?**  
-  Learn what threads are and why they are essential for parallelism in Python.
-- **Defining and managing threads**  
-  Understand how to create and manage threads for concurrent execution.
-- **Determining the current thread**  
-  Learn how to get the current active thread in a program.
-- **Using threads in a subclass**  
-  Explore the concept of subclassing the `Thread` class for custom threading behavior.
+### 2. Process Operations
+- **Spawning Processes**  
+  Understand how to spawn new processes for concurrent execution.
+  ![alt text](image.png)
+- **Assigning Custom Names to Processes**  
+  Assign meaningful names to processes for better debugging and management.
+  ![alt text](image-1.png)
+- **Running Processes in the Background**  
+  Run processes as background tasks to avoid blocking the main thread.
+  ![alt text](image-2.png)
+- **Stopping Processes Gracefully**  
+  Learn techniques to terminate processes without causing issues in the program.
+  ![alt text](image-3.png)
+- **Using Classes to Define Process Behavior**  
+  Use object-oriented programming to define process behavior via class inheritance.
 
-### 2. Thread Synchronization Techniques
-- **Lock**  
-  A synchronization tool ensuring that only one thread accesses a resource at a time.
-- **RLock**  
-  A reentrant lock allowing the same thread to acquire the lock multiple times.
-- **Semaphore**  
-  Limits concurrent access to a resource, useful for controlling access to a fixed number of resources.
-- **Condition**  
-  A mechanism for coordinating threads through `wait` and `notify` methods, ensuring proper synchronization.
-- **Event**  
-  A signaling mechanism for thread coordination, allowing threads to wait for a signal from another thread.
-- **Barrier**  
-  A synchronization point where threads must wait for others to reach the same point before continuing execution.
-  
 
-### 3. Thread Communication
-- **Using a Queue for inter-thread communication**  
-  Safe communication between threads using the `Queue` module, which avoids issues like data corruption and race conditions.
+### 3. Communication Between Processes
+- **Passing Objects via Queues**  
+  Safely share data between processes using the `Queue` module.
+  ![alt text](image-4.png)
 
-## Key Concepts Covered
+- **Establishing Connections with Pipes**  
+  Use `Pipe` objects to establish communication channels between processes.
+  ![alt text](image-5.png)
 
-### 1. Thread Management
-- Learn to define, run, and manage threads effectively using the `threading` module. Gain an understanding of how threads work in Python and the fundamentals of managing their execution.
+### 4. Synchronization and State Management
+- Learn techniques to synchronize multiple processes and manage shared states securely, preventing race conditions and data inconsistencies.
+![alt text](image-6.png)
 
-### 2. Thread Synchronization
-- Avoid concurrency issues such as race conditions, deadlocks, and synchronization problems with tools like:
-  - **Lock**: Ensures only one thread accesses a resource at a time.
-  - **RLock**: Reentrant lock for threads requiring recursive access.
-  - **Semaphore**: Limits concurrent access to a resource.
-  - **Condition**: A wait-notify mechanism to coordinate threads.
-  - **Event**: A signaling mechanism to alert threads.
-  - **Barrier**: Synchronization point where threads must wait for others to reach before proceeding.
+### 5. Process Pools
+- **Utilizing Process Pools**  
+  Efficiently handle repetitive tasks by using process pools to manage a group of worker processes.
+  ![alt text](image-7.png)
 
-### 3. Thread Communication
-- Use the `Queue` module to safely pass data between threads without manual synchronization, simplifying inter-thread communication.
-
+### 6. Deamon process
+![alt text](image-8.png)
 
