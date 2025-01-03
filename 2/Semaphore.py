@@ -22,7 +22,7 @@ def producer():
     semaphore.release()
 
 def main():
-    for i in range(10):
+    for i in range(5):
         t1 = threading.Thread(target=consumer)
         t2 = threading.Thread(target=producer)
 
