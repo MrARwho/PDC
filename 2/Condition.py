@@ -22,7 +22,7 @@ class Consumer(threading.Thread):
             condition.notify()
 
     def run(self):
-        for _ in range(20):
+        for _ in range(10):
             time.sleep(2)
             self.consume()
 
@@ -32,7 +32,7 @@ class Producer(threading.Thread):
 
     def produce(self):
         with condition:
-            if len(items) == 10:
+            if len(items) == 5:
                 logging.info(f'Items produced {len(items)}. Stopped')
                 condition.wait()
             items.append(1)
@@ -40,7 +40,7 @@ class Producer(threading.Thread):
             condition.notify()
 
     def run(self):
-        for _ in range(20):
+        for _ in range(10):
             time.sleep(0.5)
             self.produce()
 
